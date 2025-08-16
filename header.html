@@ -11,7 +11,8 @@
   
   <!-- Bootstrap Bundle JS (includes Popper) -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
   <!-- Fonts and Icons -->
   <link href="https://fonts.googleapis.com/css?family=Plus+Jakarta+Sans&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Manrope&display=swap" rel="stylesheet">
@@ -54,12 +55,12 @@
 
     .navbar-nav .nav-link {
       font-weight: 600;
-      color: white;
+      color: black;
       margin: 0 10px;
     }
 
     .navbar-nav .nav-link:hover {
-      color: #6098d5 !important;
+      color: #b08d57 !important;
     }
 
     .dropdown-menu {
@@ -103,6 +104,24 @@
         right: 0 !important;
     } */
     }
+    /* @media (max-width: 991px) {
+      .navbar-collapse {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100%;
+        width: 250px;
+        background-color: #fff;
+        box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+        padding: 1rem;
+        transition: right 0.3s ease-in-out;
+        z-index: 1050;
+      }
+      .navbar-collapse.show {
+        right: 0;
+      }
+    } */
+
      @media (max-width: 800px) {
         #mainNav{
             position: relative !important;
@@ -126,7 +145,7 @@
       transition: 1s;
     }
     .navbar:hover{
-      background-color: rgba(0, 0, 0, 0.7) !important;
+      background-color: rgba(255, 255, 255, 1) !important;
     }
     /* Hide navbar when scrolling down */
     .navbar-scroll-up {
@@ -146,35 +165,68 @@
 <body>
   <!-- Top Bar -->
   <!-- Background Section -->
-  <div style="background: url('images/bg-hero.jpg') no-repeat center center/cover; height: 500px; position: relative;">
-    
-    <!-- Transparent Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-transparent fixed-top py-3 navbar-scroll-up">
-      <div class="container">
-        <a class="navbar-brand d-flex align-items-center" href="#">
-          <img src="images/edgelogo.png" alt="Logo" style="height: 40px;" class="me-2">
-          <span class="fw-bold text-white">Edge Machines</span>
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light py-3 shadow-sm">
+    <div class="container">
+      <!-- Logo -->
+      <a class="navbar-brand fw-bold" href="#" style="color: #b08d57; font-size: 1.5rem;">
+        M<span style="color: #b08d57;">ysta</span>
+      </a>
 
-        <div class="collapse navbar-collapse" id="mainNav">
-          <ul class="navbar-nav ms-auto align-items-center">
-            <li class="nav-item"><a class="nav-link text-white" href="index.html">Home</a></li>
-            <li class="nav-item"><a class="nav-link text-white" href="#">Product</a></li>
-            <li class="nav-item"><a class="nav-link text-white" href="#">Download</a></li>
-            <li class="nav-item"><a class="nav-link text-white" href="#">Video</a></li>
-            <!-- <li class="nav-item"><a class="nav-link text-white" href="#">Contact</a></li> -->
-            <li class="nav-item">
-              <a href="#" class="btn btn-warning rounded-pill px-4 fw-bold ms-3" style="background-color: #f26522; border: none;">
-                Contact Us
-              </a>
-            </li>
-          </ul>
-        </div>
+      <!-- Mobile Toggle -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Menu Items -->
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          
+          <!-- Pages Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle fw-semibold" href="#" id="pagesDropdown" role="button" data-bs-toggle="dropdown">
+              Pages
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Page 1</a></li>
+              <li><a class="dropdown-item" href="#">Page 2</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item"><a class="nav-link fw-semibold" href="#">About Us</a></li>
+          <li class="nav-item"><a class="nav-link fw-semibold" href="#">Our Team</a></li>
+          <li class="nav-item"><a class="nav-link fw-semibold" href="#">Contact Us</a></li>
+
+          <!-- Online Shop Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle fw-semibold" href="#" id="shopDropdown" role="button" data-bs-toggle="dropdown">
+              Online Shop
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Shop 1</a></li>
+              <li><a class="dropdown-item" href="#">Shop 2</a></li>
+            </ul>
+          </li>
+
+          <!-- Blog Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle fw-semibold" href="#" id="blogDropdown" role="button" data-bs-toggle="dropdown">
+              Blog
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Blog 1</a></li>
+              <li><a class="dropdown-item" href="#">Blog 2</a></li>
+            </ul>
+          </li>
+
+          <!-- Buy Now Button -->
+          <li class="nav-item ms-lg-3">
+            <a href="#" class="btn btn-outline-dark fw-semibold px-4">Buy Now</a>
+          </li>
+        </ul>
       </div>
-    </nav>
+    </div>
+  </nav>
+
 
     <!-- Optional Hero Heading -->
     <!-- <div class="container h-100 d-flex align-items-end pb-5">
@@ -195,12 +247,12 @@
         // Scrolling down
         navbar.classList.remove("navbar-scroll-up");
         navbar.classList.add("navbar-scroll-down");
-        document.querySelector(".navbar").style.setProperty("background", "rgba(0, 0, 0, 0.4)", "important");
+        document.querySelector(".navbar").style.setProperty("background", "rgba(255, 255, 255, 0.6)", "important");
       } else {
         // Scrolling up
         navbar.classList.remove("navbar-scroll-down");
         navbar.classList.add("navbar-scroll-up");
-        document.querySelector(".navbar").style.setProperty("background", "rgba(0, 0, 0, 0.7)", "important");
+        document.querySelector(".navbar").style.setProperty("background", "rgba(255, 255, 255, 1)", "important");
         // document.querySelector(".navbar").style.background="rgba(0, 0, 0, 0.6) !important;";
       }
 

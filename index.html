@@ -103,7 +103,7 @@
 
         } */
     .owl-carousel .owl-item img {
-        height: 220px;
+        height: auto;
     }
     .imgbox .text-center .pricedisplay{
         display: none;
@@ -112,7 +112,7 @@
         text-transform: capitalize;
     }
     .item img{
-        height: 600px !important;
+        height: auto !important;
         /* max-height: 500px; */
     }
     .bg-orange {
@@ -122,186 +122,301 @@
         object-fit: cover;
         height: 100%;
         }
+    @keyframes rotateLoop {
+        0%   { transform: rotate(0deg); }
+        /* 10%  { transform: rotate(45deg); }   
+        20%  { transform: rotate(90deg); }  
+        30%  { transform: rotate(135deg); }   
+        40%  { transform: rotate(180deg); }  
+        50%  { transform: rotate(225deg); }   
+        60%  { transform: rotate(270deg); }  
+        70%  { transform: rotate(315deg); }   
+        80%  { transform: rotate(360deg); } */
+        90%  { transform: rotate(360deg); }  
+        100% { transform: rotate(0deg); }    /* Reset */
+        }
+
+        .rotating-img {
+        animation: rotateLoop 10s infinite ease-in-out;
+        }
 
     </style>
 </head>
 <body>
     <section class="minscreen">
         <header id="theader" class="w-100 fixed-top"></header>
-        <section class="hero pt-0 pb-2 w-100 bg-dark position-relative">
-            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-                
-                <!-- Indicators -->
-                <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-label="Slide 1"></button>
-                </div>
-
-                <!-- Slide Content -->
-                <div class="carousel-inner">
-                <!-- Single Slide -->
-                <div class="carousel-item active">
-                    <img src="https://camo.githubusercontent.com/6f87276238fc4d6742e582f1084db307e09aec5e9f223bea9935204fdfe3e5d7/68747470733a2f2f737465616d75736572696d616765732d612e616b616d616968642e6e65742f7567632f313735303139323538303737373332363336302f333434333938313339313833393146333344354235413638314344314532463830333530353643322f" class="d-block w-100 heroCarouselImg" alt="Onward Rise">
+        <section class="hero pt-0 pb-0 w-100 position-relative mb-0" style="background-color: #fdf8f4;">
+            <section style="background: url('https://mysta.peerduck.com/wp-content/uploads/2022/01/astrology-bg.png'); background-attachment: fixed; background-position: center; background-repeat: no-repeat; background-size: cover; padding: 6rem 0; height: 720px;">
+                <div class="container mt-4" style="display: flex; align-items: center; flex-wrap: wrap;">
                     
-                    <!-- Dark Gradient Overlay -->
-                    <div class="position-absolute top-0 start-0 w-100 h-100" style="background: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.1) 100%);"></div>
-
-                    <!-- Caption -->
-                    <div class="carousel-caption d-md-block text-start px-5 pb-5" style="z-index: 2;">
-                    <h1 class="display-4 fw-bold text-white">ONWARD RISE</h1>
-                    <p class="lead fw-medium text-white">Extraordinary Wisdom Gathering</p>
+                    <!-- Left Text Section -->
+                    <div class="mt-5" style="flex: 1; min-width: 300px;">
+                    <p style="color: #f26522; font-weight: bold; letter-spacing: 1px;">ASK ONE QUESTION FOR FREE</p>
+                    <h1 class="my-5" style="font-size: 3rem; font-weight: bold; color: #1c1c1c; line-height: 1.2;">
+                        Learn more about <br> your destiny
+                    </h1>
+                    <p class="my-5" style="color: #555; margin-top: 1rem;">
+                        Fusce sit amet velit eleifend, iaculis velit quis, malesuada lacus.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </p>
+                    <button style="margin-top: 1.5rem; background-color: #f26522; color: #fff; padding: 0.75rem 2rem; border: none; border-radius: 4px; font-weight: bold;">
+                        Get started
+                    </button>
                     </div>
-                </div>
-                </div>
 
-                <!-- Optional Controls (if more slides added) -->
-                <!--
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon"></span>
-                <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-                <span class="carousel-control-next-icon"></span>
-                <span class="visually-hidden">Next</span>
-                </button>
-                -->
-            </div>
+                    <!-- Right Rotating Image -->
+                    <div class="mt-5" style="flex: 1; text-align: center; min-width: 300px; position: relative;">
+                    <img src="https://mysta.peerduck.com/wp-content/uploads/2022/01/astrology-circle-orance-dots-1536x1536.png" alt="Astrology Circle" class="rotating-img" style="max-width: 450px; width: 100%;">
+                    </div>
+
+                </div>
+            </section>
+            <section class="w-100" style="background-color: #fdf8f4; padding: 0rem 0;">
+                <div class="container-fluid w-100" style="display: flex; justify-content: space-around; flex-wrap: wrap; gap: 2rem; background: url('https://mysta.peerduck.com/wp-content/uploads/2022/01/astrology-bg.png'); background-attachment: fixed; background-position: center; background-repeat: no-repeat; background-size: cover; padding: 4rem 0;">
+
+                    <!-- Feature 1 -->
+                    <div style="flex: 1; min-width: 250px; text-align: center;">
+                    <img src="https://mysta.peerduck.com/wp-content/uploads/2022/01/icon-1@2x.png" alt="Privacy" style="width: 80px; height: 80px; border-radius: 50%; background-color: #111; padding: 10px;">
+                    <h3 style="margin-top: 1rem; font-size: 1.25rem; font-weight: bold; color: #1c1c1c;">Privacy</h3>
+                    <p style="color: #555;">Information obtained during the consultation is private.</p>
+                    </div>
+
+                    <!-- Feature 2 -->
+                    <div style="flex: 1; min-width: 250px; text-align: center;">
+                    <img src="https://mysta.peerduck.com/wp-content/uploads/2022/01/icon-1@2x.png" alt="Result Guarantee" style="width: 80px; height: 80px; border-radius: 50%; background-color: #111; padding: 10px;">
+                    <h3 style="margin-top: 1rem; font-size: 1.25rem; font-weight: bold; color: #1c1c1c;">Result guarantee</h3>
+                    <p style="color: #555;">We provide a guaranteed 100% result</p>
+                    </div>
+
+                    <!-- Feature 3 -->
+                    <div style="flex: 1; min-width: 250px; text-align: center;">
+                    <img src="https://mysta.peerduck.com/wp-content/uploads/2022/01/icon-1@2x.png" alt="Competence" style="width: 80px; height: 80px; border-radius: 50%; background-color: #111; padding: 10px;">
+                    <h3 style="margin-top: 1rem; font-size: 1.25rem; font-weight: bold; color: #1c1c1c;">Competence</h3>
+                    <p style="color: #555;">We only take on issues that we can solve</p>
+                    </div>
+
+                </div>
+            </section>
+
+
+
+
 
             <!-- Orange Border Decoration -->
-            <div class="position-absolute bottom-0 start-50 w-50 text-center mx-auto" style="border-bottom: 2px solid #f26522;"></div>
-            <div class="position-absolute bottom-0 start-0 w-50 text-center mx-auto" style="border-bottom: 3px solid #12cef0;"></div>
+            <!-- <div class="position-absolute bottom-0 start-50 w-50 text-center mx-auto" style="border-bottom: 2px solid #f26522;"></div>
+            <div class="position-absolute bottom-0 start-0 w-50 text-center mx-auto" style="border-bottom: 3px solid #12cef0;"></div> -->
         </section>
 
-        <section class="position-relative text-white w-100" style="background: url('https://w0.peakpx.com/wallpaper/675/369/HD-wallpaper-machine-high-tech.jpg') no-repeat center center/cover; padding: 100px 0;">
-        <div class="overlay position-absolute top-0 start-0 w-100 h-100" style="background: rgba(0,0,0,0.6); z-index: 1;"></div>
-        <div class="container position-relative" style="z-index: 2;">
-            <div class="row">
-                <div class="col-lg-8">
-                    <h1 class="display-4 fw-bold mb-4">ABOUT US</h1>
-                    <p class="fs-5">
-                    <strong>Since 2024</strong>, DIS Management Services Pvt. Ltd. has been committed to providing complete security, facility, and digital management services. From physical security to IT, IoT, and payroll services, we bring innovative solutions with integrity.
-                    </p>
-                    <p class="fs-5">
-                    Founded by Mr. Dipak Mondal, our leadership comprises defense veterans, engineers, and admin experts—ensuring disciplined service delivery and ongoing management excellence.
-                    </p>
-                    <p class="my-5">&nbsp</p>
-                    <a href="about.html" class="btn btn-outline-light mt-5 px-5 py-2 rounded-pill" style="transition: 1s;">
-                    <i class="fas fa-arrow-right me-2"></i> More
-                    </a>
+        <section class="py-0 pt-0" style="background-color: #faf6f1;">
+            <div class="container-fluid py-5" style="background: url('https://mysta.peerduck.com/wp-content/uploads/2022/01/astrology-bg.png'); background-attachment: fixed;">
+                <div class="row align-items-center">
+                
+                <!-- Left Image -->
+                <div class="col-md-6 text-center mb-4 mb-md-0">
+                    <img src="https://mysta.peerduck.com/wp-content/uploads/2022/01/hands-1268x1536.png" alt="Astrology Illustration" class="img-fluid" style="max-height: 400px;">
                 </div>
-                <div class="col-lg-4">
-                    <div class="">
-                        <img src="images/edgemission.png" alt="" height="500px" width="100%" style="box-shadow: 0 0 15px 1px whitesmoke;">
-                    </div>
+
+                <!-- Right Text -->
+                <div class="col-md-6">
+                    <h6 class="text-uppercase fw-bold mb-3" style="color: #e2764e;">What We Do</h6>
+                    <h2 class="fw-bold mb-4" style="font-family: 'Georgia', serif;">We know everything about astrology</h2>
+                    <p class="text-muted mb-4">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mi tellus, pulvinar vel tempus eget, finibus vitae ante. Fusce sit amet velit eleifend, iaculis velit quis, malesuada lacus. Vestibulum sodales magna a volutpat tempus. Mauris vestibulum id urna viverra ultrices. Nullam rhoncus elit eget libero varius dapibus.
+                    </p>
+                    <a href="#" class="btn btn-lg fw-bold text-white" style="background-color: #ff4500;">Get started</a>
+                </div>
+
                 </div>
             </div>
+        </section>
+
+
+<!-- Owl Carousel CSS -->
+
+
+        <section class="pt-0 w-100" style="background-color: #faf6f1;">
+            <div class="container-fluid pt-0 text-center" style="background: url('https://mysta.peerduck.com/wp-content/uploads/2022/01/astrology-bg.png'); background-attachment: fixed;">
+                <!-- <h3 class="fw-bold mb-5 text-center">Top Dishes Near You</h3> -->
+                <div class="owl-carousel owl-theme mx-auto py-3" style="width: 80%;">
+                
+                <!-- Item 1 -->
+                <div class="item text-center">
+                    <img src="https://mysta.peerduck.com/wp-content/uploads/2022/01/gemini-300x300.png" alt="Dish 1" class="img-fluid rounded">
+                    <!-- <h5 class="mt-3">Dish Name 1</h5> -->
+                </div>
+
+                <div class="item text-center">
+                    <img src="https://mysta.peerduck.com/wp-content/uploads/2022/01/cancer-300x300.png" alt="Dish 1" class="img-fluid rounded">
+                    <!-- <h5 class="mt-3">Dish Name 1</h5> -->
+                </div>
+
+                <div class="item text-center">
+                    <img src="https://mysta.peerduck.com/wp-content/uploads/2022/01/sagittarius-300x300.png" alt="Dish 1" class="img-fluid rounded">
+                    <!-- <h5 class="mt-3">Dish Name 1</h5> -->
+                </div>
+
+                <!-- Item 2 -->
+                <div class="item text-center">
+                    <img src="https://mysta.peerduck.com/wp-content/uploads/2022/01/aries-300x300.png" alt="Dish 2" class="img-fluid rounded">
+                    <!-- <h5 class="mt-3">Dish Name 2</h5> -->
+                </div>
+
+                <!-- Item 3 -->
+                <div class="item text-center">
+                    <img src="https://mysta.peerduck.com/wp-content/uploads/2022/01/scorpio-300x300.png" alt="Dish 3" class="img-fluid rounded">
+                    <!-- <h5 class="mt-3">Dish Name 3</h5> -->
+                </div>
+
+                <div class="item text-center">
+                    <img src="https://mysta.peerduck.com/wp-content/uploads/2022/01/tarius-300x300.png" alt="Dish 3" class="img-fluid rounded">
+                    <!-- <h5 class="mt-3">Dish Name 3</h5> -->
+                </div>
+
+                <div class="item text-center">
+                    <img src="https://mysta.peerduck.com/wp-content/uploads/2022/01/aquarius-300x300.png" alt="Dish 3" class="img-fluid rounded">
+                    <!-- <h5 class="mt-3">Dish Name 3</h5> -->
+                </div>
+
+                <!-- Add more items as needed -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Owl Carousel JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+        <script>
+        $(document).ready(function(){
+            $(".owl-carousel").owlCarousel({
+            loop: true,
+            margin: 15,
+            autoplay: true,
+            autoplayTimeout: 2000, // 2 seconds
+            autoplayHoverPause: true,
+            responsive: {
+                0: { items: 1 },
+                576: { items: 2 },
+                768: { items: 4 },
+                992: { items: 8 }
+            }
+            });
+        });
+        </script>
+
+<!-- Services Section -->
+        <section class="py-5 text-light w-100" style="background-color:#1b1b2f;">
+        <div class="container text-center">
+            
+            <!-- Icon + Subtitle -->
+            <div class="mb-3">
+            <span class="fs-1">⭐</span>
+            </div>
+            <h6 class="text-uppercase fw-bold" style="color:#e68b7f;">Our Services</h6>
+            <h2 class="fw-bold mb-5">Astrology is just a finger<br>pointing at reality</h2>
+            
+            <!-- Services Cards -->
+            <div class="row g-4">
+            <div class="col-md-4">
+                <div class="p-4 h-100 border rounded-3" style="background-color:#22223b;">
+                <div class="mb-3">
+                    <img src="https://mysta.peerduck.com/wp-content/uploads/2022/01/services-4@2x.png" alt="General consultation" width="60">
+                </div>
+                <h5 class="fw-bold">General consultation</h5>
+                <p class="text-success">
+                    Astrology is one of the earliest attempts made by man to find the order 
+                    hidden behind or within the confusing and apparent chaos that exists in the world.
+                </p>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="p-4 h-100 border rounded-3" style="background-color:#22223b;">
+                <div class="mb-3">
+                    <img src="https://mysta.peerduck.com/wp-content/uploads/2022/01/services-4@2x.png" alt="Personal life advice" width="60">
+                </div>
+                <h5 class="fw-bold">Personal life advice</h5>
+                <p class="text-primary">
+                    Astrology is one of the earliest attempts made by man to find the order 
+                    hidden behind or within the confusing and apparent chaos that exists in the world.
+                </p>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="p-4 h-100 border rounded-3" style="background-color:#22223b;">
+                <div class="mb-3">
+                    <img src="https://mysta.peerduck.com/wp-content/uploads/2022/01/services-4@2x.png" alt="Annual forecast" width="60">
+                </div>
+                <h5 class="fw-bold">Annual forecast</h5>
+                <p class="text-warning">
+                    Astrology is one of the earliest attempts made by man to find the order 
+                    hidden behind or within the confusing and apparent chaos that exists in the world.
+                </p>
+                </div>
+            </div>
+            </div>
+            
         </div>
         </section>
-
-        <section class="py-5 text-white w-100" style="background-color: #000;">
-        <div class="container">
-            <!-- Section Title -->
-            <div class="text-center mb-4">
-            <h2 class="fw-bold display-5">PRODUCT & SERVICE</h2>
-            <p class="lead">United Team, Exceeding Expectations</p>
-            </div>
-
-            <!-- Category Navigation Tabs -->
-            <div class="row text-center justify-content-center mb-4 border-bottom border-secondary pb-3">
-            <div class="col-md-2 col-6 mb-3">
-                <img src="https://www.victortaichung.com/web/image/23957-756b7dc8/%E5%B7%A5%E5%85%B7%E6%A9%9Ficon.png" style="height: 40px;" alt="Machine Tools">
-                <p class="fw-bold mt-2 border-bottom border-2 border-warning d-inline-block pb-1">Manpower</p>
-            </div>
-            <div class="col-md-2 col-6 mb-3">
-                 <img src="https://www.victortaichung.com/web/image/23957-756b7dc8/%E5%B7%A5%E5%85%B7%E6%A9%9Ficon.png" style="height: 40px;" alt="Machine Tools">
-                <p class="fw-bold mt-2 border-bottom border-2 border-warning d-inline-block pb-1">Manpower</p>
-            </div>
-            <div class="col-md-2 col-6 mb-3">
-                 <img src="https://www.victortaichung.com/web/image/23957-756b7dc8/%E5%B7%A5%E5%85%B7%E6%A9%9Ficon.png" style="height: 40px;" alt="Machine Tools">
-                <p class="fw-bold mt-2 border-bottom border-2 border-warning d-inline-block pb-1">Manpower</p>
-            </div>
-            <div class="col-md-2 col-6 mb-3">
-                <img src="https://www.victortaichung.com/web/image/23957-756b7dc8/%E5%B7%A5%E5%85%B7%E6%A9%9Ficon.png" style="height: 40px;" alt="Machine Tools">
-                <p class="fw-bold mt-2 border-bottom border-2 border-warning d-inline-block pb-1">Manpower</p>
-            </div>
-            </div>
-
-            <!-- Main Product Description Section -->
-            <div class="row align-items-center bg-transparent w-100 p-4 rounded-3" style="box-shadow: 0 0 4000px .1px orange;">
-            <!-- Text Section -->
-                <div class="col-lg-7">
-                    <h1 class="fw-bold display-5">MANPOWER SERVICES</h1>
-                    <p class="fs-5">
-                    We provide trained and verified personnel across sectors — from security guards and bouncers to electricians, housekeeping staff, and hospitality professionals.
-                    </p>
-                    <p class="fs-5">
-                    Our workforce ensures efficiency, discipline, and professionalism in every assigned role, helping businesses run smoothly.
-                    </p>
-                    <a href="#" class="btn btn-outline-light px-5 py-2 rounded-pill mt-5">
-                    <i class="fas fa-arrow-right me-2"></i> more
-                    </a>
-                </div>
-
-            <!-- Image Section -->
-                <div class="col-lg-5 text-center mt-5 mt-lg-0">
-                    <img src="https://wallpaperbat.com/img/668639-mechanical-wallpaper-top-free-mechanical-background.jpg" width="100%" style="box-shadow: 0 0 10px 1px greenyellow;" class="rounded-4">
-                </div>
-            </div>
-        </div>
-        </section>
-        <section class="position-relative bg-dark text-white py-5" style="overflow:hidden;">
-        <div class="container-fluid px-0 mb-4">
-            <div class="row g-0 align-items-center">
-
+<!-- Tarot Section -->
+        <section class="py-0 w-100" style="background-color:#faf6f3;">
+        <div class="container-fluid py-5" style="background: url('https://mysta.peerduck.com/wp-content/uploads/2022/01/astrology-bg.png'); background-attachment: fixed;">
+            <div class="row align-items-center g-5">
+            
             <!-- Left Image -->
-            <div class="col-lg-6 d-none d-lg-block">
-                <img src="https://media.zinnov.com/wp-content/uploads/2024/03/employee-benefits-study-an-india-gcc-view-2024-featured-300x150.jpg" alt="Join Team" class="img-fluid w-100 h-100 object-fit-cover" class="rounded-4">
+            <div class="col-lg-6 text-center">
+                <img src="https://mysta.peerduck.com/wp-content/uploads/2022/01/tarot-consultation.png" alt="Tarot Cards" class="img-fluid">
             </div>
-
-            <!-- Right Orange Panel -->
-            <div class="col-lg-6 bg-orange text-white position-relative" style="border-top-left-radius: 80px;">
-                <div class="p-5">
-                <h2 class="fw-bold display-5">JOIN THE TEAM</h2>
-                <p class="lead">Join our team of 800+ dedicated employees across 7 countries/6 regions, driving progress every day. Ready to enjoy the work, contribute to the world, and grow with us?</p>
-                <a href="#careerForm" class="btn btn-outline-light rounded-pill p-4 py-2 mt-3">
-                    <i class="fa fa-arrow-right mx-2"></i>  career
+            
+            <!-- Right Content -->
+            <div class="col-lg-6">
+                <h6 class="text-uppercase fw-bold mb-3" style="color:#e68b7f;">Other Services</h6>
+                <h2 class="fw-bold mb-4">Tarot consultations<br>on various topics</h2>
+                <p class="text-muted mb-4">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mi tellus, 
+                pulvinar vel tempus eget, finibus vitae ante. Fusce sit amet velit eleifend, 
+                iaculis velit quis, malesuada lacus. Vestibulum sodales magna a volutpat tempus. 
+                Mauris vestibulum id urna viverra ultrices. Nullam rhoncus elit eget libero 
+                varius dapibus.
+                </p>
+                <a href="#" class="fw-bold" style="color:#e68b7f; text-decoration:none;">
+                Learn more
                 </a>
-                </div>
+                <div style="border-bottom:2px solid #e68b7f; width:100px; margin-top:4px;"></div>
             </div>
+            
             </div>
         </div>
-
-        <!-- Career Form -->
-        <!-- <div class="container mt-5" id="careerForm">
-            <div class="bg-dark rounded p-5" style="box-shadow: 0 0 5px 1px white;">
-            <h4 class="text-center text-white fw-bold mb-4"><i class="fa-solid fa-briefcase text-warning"></i> Join Our Team</h4>
-            <form class="row g-3">
-                <div class="col-md-6">
-                <label for="name" class="form-label">Full Name</label>
-                <input type="text" class="form-control" id="name" required>
-                </div>
-                <div class="col-md-6">
-                <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email" required>
-                </div>
-                <div class="col-md-6">
-                <label for="phone" class="form-label">Phone</label>
-                <input type="tel" class="form-control" id="phone" required>
-                </div>
-                <div class="col-md-6">
-                <label for="position" class="form-label">Position Applied For</label>
-                <input type="text" class="form-control" id="position" required>
-                </div>
-                <div class="col-12">
-                <label for="message" class="form-label">Additional Information</label>
-                <textarea class="form-control" id="message" rows="3"></textarea>
-                </div>
-                <div class="col-12 text-center">
-                <button type="submit" class="btn btn-warning px-5">Submit</button>
-                </div>
-            </form>
-            </div>
-        </div> -->
         </section>
+<!-- Hero CTA Section -->
+        <section class="py-0 w-100" style="background-color:#1c1b29; color:#fff; position:relative; overflow:hidden;">
+        <div class="container-fluid py-5" style="background: url('https://mysta.peerduck.com/wp-content/uploads/2022/01/astrology-bg.png'); background-attachment: fixed;">
+            <div class="row align-items-center">
+            
+            <!-- Left Image -->
+            <div class="col-lg-6 text-center mb-4 mb-lg-0">
+                <img src="https://mysta.peerduck.com/wp-content/uploads/2022/01/planets-2-1.png" alt="Moon and Stars" class="img-fluid">
+            </div>
+            
+            <!-- Right Content -->
+            <div class="col-lg-6">
+                <h2 class="fw-bold mb-3">Get an answer to one question<br>for free</h2>
+                <p class="mb-4 text-light">
+                Your path is illuminated by a road-map of stars. I am here to guide you!
+                </p>
+                <a href="#" class="btn btn-lg px-4" 
+                style="background:linear-gradient(90deg,#ff4d00,#ff7300); color:#fff; font-weight:bold;">
+                Get started
+                </a>
+            </div>
+            
+            </div>
+        </div>
+        </section>
+
+
+
 
 
 
