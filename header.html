@@ -217,6 +217,15 @@
               <li><a class="dropdown-item" href="#">Blog 2</a></li>
             </ul>
           </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle fw-semibold" href="#" id="globeDropdown" role="button" data-bs-toggle="dropdown">
+              <i class="fa-solid fa-globe"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="javascript:void(0);" onclick="translatePage('en')">English</a></li>
+              <li><a class="dropdown-item" href="javascript:void(0);" onclick="translatePage('mr')">Marathi</a></li>
+            </ul>
+          </li>
 
           <!-- Buy Now Button -->
           <li class="nav-item ms-lg-3">
@@ -259,7 +268,38 @@
       lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
     });
   </script>
+  <script>
+    let currentLang = "en"; // default language
 
+    // Translation function using Google Translate unofficial API
+    async function translateText(text, targetLang) {
+      const url = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=${targetLang}&dt=t&q=${encodeURIComponent(text)}`;
+      const response = await fetch(url);
+      const data = await response.json();
+      return data[0].map(item => item[0]).join("");
+    }
+
+    async function translatePage(targetLang) {
+      const elements = document.querySelectorAll(".translatable");
+      for (let el of elements) {
+        const translated = await translateText(el.innerText, targetLang);
+        el.innerText = translated;
+      }
+    }
+
+    // Toggle language button
+    document.getElementById("toggleLang").addEventListener("click", async () => {
+      if (currentLang === "en") {
+        await translatePage("mr"); // English → Marathi
+        currentLang = "mr";
+        document.getElementById("toggleLang").innerText = "English";
+      } else {
+        await translatePage("en"); // Marathi → English
+        currentLang = "en";
+        document.getElementById("toggleLang").innerText = "मराठी";
+      }
+    });
+  </script>
 
 </body>
 </html>
