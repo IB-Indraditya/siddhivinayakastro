@@ -28,7 +28,7 @@
     margin-right: auto;
 }
 .navitemcontainer .nav-item{
-    margin: 0 1.5rem;
+    margin: 0 1rem;
     color: var(--theme-darksilver);
     transition: .4s;
 }
