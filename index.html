@@ -25,9 +25,23 @@
             .gallerycol3{
                 width: auto !important;
             }
+            .rotating-img{
+                margin-left: 0 !important;
+            }
         }
         .item .text-white{
             text-transform: uppercase;
+        }
+        @media(max-width: 992px){
+            .bannerht{
+                height: 900px;
+            }
+            .rotating-img{
+                width: 200px;
+            }
+        }
+        .bannerht{
+            height: 740px;
         }
         @media(max-width: 960px){
             .gallery3{
@@ -149,7 +163,7 @@
     <section class="minscreen">
         <header id="theader" class="w-100 fixed-top"></header>
         <section class="hero pt-0 pb-0 w-100 position-relative mb-0" style="background-color: #fdf8f4;">
-            <section style="background: url('images/astrobanner.jpg'); background-attachment: fixed; background-position: center; background-repeat: no-repeat; background-size: cover; padding: 6rem 0; height: 740px;">
+            <section class="bannerht" style="background: url('images/astrobanner.jpg'); background-attachment: fixed; background-position: center; background-repeat: no-repeat; background-size: cover; padding: 6rem 0;">
                 <div class="container mt-4" style="display: flex; align-items: center; flex-wrap: wrap;">
                     
                     <!-- Left Text Section -->
